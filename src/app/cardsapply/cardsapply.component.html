@@ -1,0 +1,167 @@
+<!-- <div class="mt-32 bg-[url('/assets/images/greybg.png')] bg-no-repeat bg-cover">
+    <h1 class="ms-28 text-3xl font-normal text-blue-950">Get Started for Instant Approval </h1>
+    <form class="mt-16 px-16">
+        <div class="grid grid-cols-12 w-full gap-5 px-10 mt-5 gap-y-12">
+            <div class="form-group col-span-6">
+                <input formControlName="cardnumber" type="number" placeholder="Pan Number"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent">
+            </div>
+            <div class="form-group col-span-6">
+                <input formControlName="cardholder" type="email" placeholder="Email"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0  bg-transparent">
+            </div>
+
+            <div class="form-group col-span-6">
+                <input formControlName="cardholder" type="email" placeholder="Email"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0  bg-transparent">
+            </div>
+
+            <div class="form-group col-span-6">
+                <input formControlName="cvv" id="date" type="number" placeholder="Current PIN"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent">
+            </div>
+            <div class="form-group col-span-6">
+                <input formControlName="cardholder" id="name" type="text" placeholder="Job Title"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0  bg-transparent">
+            </div>
+            
+            <div class="form-group col-span-6">
+                <input formControlName="cvv" id="date" type="text" placeholder="Employers Name"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent">
+            </div>
+            <div class="form-group col-span-6">
+                <input formControlName="cardholder" id="name" type="number" placeholder="Annul Income"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0  bg-transparent">
+            </div>
+            
+            <div class="form-group col-span-6">
+                <input formControlName="cvv" id="date" type="text" placeholder="Address"
+                    class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent">
+            </div>
+        </div>
+
+        <div class="ms-10 mt-14  pb-32">
+                <button class="py-2 px-20 bg-blue-500 text-white rounded hover:bg-blue-700 mt-2">Apply Now</button>
+        </div>
+    </form>
+</div> -->
+
+<!-- ----------------------------------------------------------- -->
+<!-- <p class="text-9xl mt-10">hhhh</p>
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+    <div>
+        <label for="">Pan Number</label>
+        <input type="text" name="" id="">
+    </div>
+</form> -->
+
+<div class="mt-32 bg-[url('/assets/images/greybg.png')] bg-no-repeat bg-cover">
+    <h1 class="ms-28 text-4xl font-medium mb-1 text-blue-950">Instant Approval </h1>
+    <h1 class="ms-28 text-xl font-normal text-blue-950">Apply Now & Get your Card Instantly</h1>
+    <form class="mt-16 px-16 mb-20" #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+        <div class="grid grid-cols-12 w-full gap-5 px-10 mt-5 gap-y-12">
+            <div class="form-group col-span-6">
+                <input class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent"
+                    placeholder="Pan Number" type="text" id="pannumber" required ngModel name="pannumber" />
+            </div>
+            <div class="form-group col-span-6">
+                <input class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent"
+                    placeholder="Mobile Number" type="number" id="mobilenumber" required ngModel name="mobilenumber" />
+            </div>
+            <div class="form-group col-span-6">
+                <input class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent"
+                    placeholder="Email" type="email" id="email" required ngModel name="email" />
+            </div>
+            <div class="form-group col-span-6">
+                <input class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent"
+                    placeholder="Job Title" type="text" id="jobtitle" required ngModel name="jobtitle" />
+            </div>
+            <div class="form-group col-span-6">
+                <input class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent"
+                    placeholder="Employers Name" type="text" id="employersname" required ngModel name="employersname" />
+            </div>
+            <div class="form-group col-span-6">
+                <input class="w-full border-b-2 border-gray-200 border-0 focus:ring-0 bg-transparent"
+                    placeholder="Annual Income" type="text" id="annualincome" required ngModel name="annualincome" />
+            </div>
+        </div>
+        <div class="mt-20">
+            <span *ngIf="!postForm.valid && postForm.touched" class="help-block text-md text-red-400 ms-10">Please
+                fill all the details</span>
+        </div>
+       
+        <div class="flex justify-end">
+            <button
+                class="py-1 mt-16 me-10 px-20 bg-blue-500 text-white rounded hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
+                type="submit" [disabled]="!postForm.valid" (click)="onFetchPosts()">
+                Apply Now
+            </button>
+        </div>
+    </form>
+
+    <hr />
+
+    <!-- <div class="">
+        <div class="">
+            <button class="" (click)="onFetchPosts()">
+                Fetch Posts
+            </button>
+        </div>
+    </div> -->
+
+
+    <h1 class="text-center font-semibold text-3xl mt-16 mb-10">Customer Details</h1>
+    <div class="mx-5 mt-5 mb-20">
+        <div class="">
+            <div class="grid grid-cols-6 text-center">
+                <div class="col-span-1 border border-black">
+                    <p class="border-b border-black text-lg font-medium py-2 bg-blue-100">Pan Number</p>
+                    <div class="flex justify-center p-2" *ngFor="let post of loadedPosts">
+                        <p>{{ post.pannumber }}</p>
+                    </div>
+                </div>
+                <div class="col-span-1 border border-black">
+                    <p class="border-b border-black text-lg font-medium py-2 bg-blue-100">Mobile Number</p>
+                    <div class="flex justify-center p-2" *ngFor="let post of loadedPosts">
+                        <p class="text-center">{{ post.mobilenumber}}</p>
+                    </div>
+                </div>
+                <div class="col-span-1 border border-black">
+                    <p class="border-b border-black text-lg font-medium py-2 bg-blue-100">Email</p>
+                    <div class="flex justify-center p-2" *ngFor="let post of loadedPosts">
+                        <p>{{ post.email }}</p>
+                    </div>
+                </div>
+                <div class="col-span-1 border border-black">
+                    <p class="border-b border-black text-lg font-medium py-2 bg-blue-100">Job Title</p>
+                    <div class="flex justify-center p-2" *ngFor="let post of loadedPosts">
+                        <p>{{ post.jobtitle }}</p>
+                    </div>
+                </div>
+                <div class="col-span-1 border border-black">
+                    <p class="border-b border-black text-lg font-medium py-2 bg-blue-100">Employers Name</p>
+                    <div class="flex justify-center p-2" *ngFor="let post of loadedPosts">
+                        <p>{{ post.employersname }}</p>
+                    </div>
+                </div>
+                <div class="col-span-1 border border-black">
+                    <p class="border-b border-black text-lg font-medium py-2 bg-blue-100">Annual Income</p>
+                    <div class="flex justify-center p-2" *ngFor="let post of loadedPosts">
+                        <p>{{ post.annualincome }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="flex gap-5" *ngFor="let post of 
+            loadedPosts">
+                <p>{{ post.pannumber }}</p>
+                <p>{{ post.mobilenumber }}</p>
+                <p>{{ post.email }}</p>
+                <p>{{ post.currentpin }}</p>
+                <p>{{ post.jobtitle }}</p>
+                <p>{{ post.employersname }}</p>
+                <p>{{ post.annualincome }}</p>
+                <p>{{ post.address }}</p>
+            </div> -->
+        </div>
+    </div>
+</div>
